@@ -134,9 +134,9 @@ open class ROStorageBar : UIView {
         if displayTitle {
             if let actualFont = fontTitle {
                 let textFontAttributes = [
-                    NSFontAttributeName: actualFont,
-                    NSForegroundColorAttributeName: textColor,
-                    NSParagraphStyleAttributeName: textStyle
+                    NSAttributedStringKey.font: actualFont,
+                    NSAttributedStringKey.foregroundColor: textColor,
+                    NSAttributedStringKey.paragraphStyle: textStyle
                 ]
                 
                 let titleStringToDraw:NSString = NSString(string: storageBarValue.title)
@@ -156,9 +156,9 @@ open class ROStorageBar : UIView {
         if displayValue {
             if let actualFont = fontValue {
                 let textFontAttributes = [
-                    NSFontAttributeName: actualFont,
-                    NSForegroundColorAttributeName: textColor,
-                    NSParagraphStyleAttributeName: textStyle
+                    NSAttributedStringKey.font: actualFont,
+                    NSAttributedStringKey.foregroundColor: textColor,
+                    NSAttributedStringKey.paragraphStyle: textStyle
                 ]
                 
                 // Amount of linebreaks the title will have
@@ -211,9 +211,9 @@ open class ROStorageBar : UIView {
             // Title drawing
             if let actualFont = fontTitle {
                 let textFontAttributes = [
-                    NSFontAttributeName: actualFont,
-                    NSForegroundColorAttributeName: textColor,
-                    NSParagraphStyleAttributeName: textStyle
+                    NSAttributedStringKey.font: actualFont,
+                    NSAttributedStringKey.foregroundColor: textColor,
+                    NSAttributedStringKey.paragraphStyle: textStyle
                 ]
                 
                 let titleRect = CGRect(x: posX + sizeRect + offsetToRectangle, y: posY, width: widthText, height: heightText)
@@ -224,9 +224,9 @@ open class ROStorageBar : UIView {
             // Value drawing
             if let actualFont = fontValue {
                 let textFontAttributes = [
-                    NSFontAttributeName: actualFont,
-                    NSForegroundColorAttributeName: textColor,
-                    NSParagraphStyleAttributeName: textStyle
+                    NSAttributedStringKey.font: actualFont,
+                    NSAttributedStringKey.foregroundColor: textColor,
+                    NSAttributedStringKey.paragraphStyle: textStyle
                 ]
                 
                 let valueRect = CGRect(x: posX + sizeRect + offsetToRectangle, y: posY + offsetToTitle, width: widthText, height: heightText)
